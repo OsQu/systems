@@ -16,7 +16,7 @@ module Printers
       @stocks = stocks
     end
 
-    def print
+    def print(_tick_number)
       @stocks.map do |stock|
         "  #{stock.name} => #{stock.value}"
       end.join("\n")
