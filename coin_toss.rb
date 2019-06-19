@@ -14,4 +14,4 @@ coin_toss = Systems.define do |s|
   score.add_source coin
 end
 
-coin_toss.run(printer_klass: Printers::CSV)
+coin_toss.run(ticks: 1000_000, printer_klass: Printers::CSV, printer_rate: 100)
