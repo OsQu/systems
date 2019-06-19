@@ -1,4 +1,5 @@
 require './entities/system'
+require './printers/csv'
 
 coin_toss = Systems.define do |s|
   score = s.stock(:score)
@@ -13,4 +14,4 @@ coin_toss = Systems.define do |s|
   score.add_source coin
 end
 
-coin_toss.run
+coin_toss.run(printer_klass: Printers::CSV)

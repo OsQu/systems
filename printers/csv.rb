@@ -1,15 +1,7 @@
 module Printers
-  class Pretty
+  class CSV
     def header
-      "Simulation started"
-    end
-
-    def footer
-      "Simulation ended"
-    end
-
-    def tick_header(i)
-      "#{i}:"
+      "stock,value"
     end
 
     def initialize(stocks)
@@ -18,7 +10,7 @@ module Printers
 
     def print
       @stocks.map do |stock|
-        "  #{stock.name} => #{stock.value}"
+        "#{stock.name},#{stock.value}"
       end.join("\n")
     end
   end
