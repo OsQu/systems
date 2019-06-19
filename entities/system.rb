@@ -20,8 +20,14 @@ class System
     end
   end
 
-  def flow(name, opts = {})
-    Flow.new(name, opts)
+  def static_flow(name, rate:)
+    Flow.new(name) do
+      rate
+    end
+  end
+
+  def dynamic_flow(name, &block)
+    Flow.new(name, &block)
   end
 
   def run(ticks = -1)

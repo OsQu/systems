@@ -1,12 +1,12 @@
 class Flow
   include Entity
 
-  def initialize(name, rate:)
+  def initialize(name, &block)
     super
-    @rate = rate
+    @evaluate = block
   end
 
   def process
-    @rate
+    @evaluate.call
   end
 end

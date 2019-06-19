@@ -1,8 +1,8 @@
 require './entities/system'
 
 car_dealership = Systems.define do |s|
-  factory = s.flow(:factory, rate: 1)
-  deal = s.flow(:deal, rate: 1)
+  factory = s.static_flow(:factory, rate: 1)
+  deal = s.static_flow(:deal, rate: 1)
   inventory = s.stock(:inventory)
 
   inventory.add_source factory
