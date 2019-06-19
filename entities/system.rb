@@ -26,7 +26,7 @@ class System
     end
   end
 
-  def dynamic_flow(name, &block)
+  def flow(name, &block)
     Flow.new(name, &block)
   end
 
@@ -40,14 +40,14 @@ class System
         tick(i, printer)
       end
     else
-      loop { |i| tick(i, printer) }
+      1.step { |i| tick(i, printer) }
     end
 
     puts printer.footer
   end
 
-  def tick(i, printer)
-    puts printer.tick_header(i)
+  def tick(tick_number, printer)
+    puts printer.tick_header(tick_number)
 
     @stocks.each(&:tick)
 
