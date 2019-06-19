@@ -1,6 +1,5 @@
 require_relative 'entity'
-require_relative 'sink'
-require_relative 'source'
+require_relative 'flow'
 require_relative 'stock'
 require_relative '../printers/pretty'
 
@@ -21,12 +20,8 @@ class System
     end
   end
 
-  def source(name, opts = {})
-    Source.new(name, opts)
-  end
-
-  def sink(name, opts = {})
-    Sink.new(name, opts)
+  def flow(name, opts = {})
+    Flow.new(name, opts)
   end
 
   def run(ticks = -1)

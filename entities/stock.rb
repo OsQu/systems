@@ -12,15 +12,15 @@ class Stock
     @sinks = []
   end
 
-  def add_source(source)
-    @sources << source
+  def add_source(flow)
+    @sources << flow
   end
 
-  def add_sink(sink)
-    @sinks << sink
+  def add_sink(flow)
+    @sinks << flow
   end
 
   def tick
-    @value = @value + @sources.map(&:produce).sum - @sinks.map(&:consume).sum
+    @value = @value + @sources.map(&:process).sum - @sinks.map(&:process).sum
   end
 end

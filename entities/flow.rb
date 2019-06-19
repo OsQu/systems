@@ -1,4 +1,4 @@
-class Source
+class Flow
   include Entity
 
   def initialize(name, rate:)
@@ -6,7 +6,7 @@ class Source
     @rate = rate
   end
 
-  def produce
+  def process
     @rate
   end
 end
