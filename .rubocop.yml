@@ -1,0 +1,390 @@
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.4
+  Exclude:
+    - bin/**
+    - db/schema.rb
+    - vendor/vagrant/**
+    - Brewfile
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+Rails/ApplicationRecord:
+  Exclude:
+    - db/migrate/*
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Layout/AlignParameters:
+  Enabled: true
+
+Lint/BlockAlignment:
+  Enabled: true
+
+Layout/DotPosition:
+  Enabled: true
+  EnforcedStyle: leading
+
+Layout/ElseAlignment:
+  Enabled: true
+
+Layout/EmptyLineBetweenDefs:
+  Enabled: true
+
+Layout/EmptyLines:
+  Enabled: false
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundMethodBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Lint/EndAlignment:
+  Enabled: true
+
+Layout/ExtraSpacing:
+  Exclude:
+    - 'db/**/*'
+
+Layout/IndentationConsistency:
+  Enabled: true
+
+Layout/IndentationWidth:
+  Enabled: true
+
+Layout/SpaceAfterColon:
+  Enabled: true
+
+Layout/SpaceAfterComma:
+  Enabled: true
+
+Layout/SpaceAfterMethodName:
+  Enabled: true
+
+Layout/SpaceAroundOperators:
+  Enabled: true
+
+Layout/SpaceBeforeBlockBraces:
+  Enabled: false
+
+Layout/SpaceBeforeComma:
+  Enabled: true
+
+Layout/SpaceInsideBlockBraces:
+  Enabled: false
+
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+Layout/SpaceInsideStringInterpolation:
+  Enabled: false
+
+Layout/TrailingBlankLines:
+  Enabled: true
+
+Layout/TrailingWhitespace:
+  Enabled: true
+
+Layout/Tab:
+  Enabled: true
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Lint/AssignmentInCondition:
+  Enabled: true
+  AllowSafeAssignment: true
+
+Lint/Debugger:
+  Enabled: true
+
+Lint/DuplicateMethods:
+  Enabled: false
+
+Security/Eval:
+  Enabled: true
+
+Lint/HandleExceptions:
+  Enabled: true
+
+Lint/NestedMethodDefinition:
+  Enabled: true
+
+Lint/NonLocalExitFromIterator:
+  Enabled: true
+
+Lint/ParenthesesAsGroupedExpression:
+  Enabled: true
+
+Lint/RescueException:
+  Enabled: true
+
+Lint/ShadowingOuterLocalVariable:
+  Enabled: true
+
+Lint/StringConversionInInterpolation:
+  Enabled: true
+
+Lint/UnusedBlockArgument:
+  Enabled: true
+
+Lint/UnusedMethodArgument:
+  Enabled: true
+
+Lint/UselessAssignment:
+  Enabled: true
+
+Lint/Void:
+  Enabled: true
+
+Metrics/AbcSize:
+  Max: 30
+
+Metrics/BlockLength:
+  CountComments: false  # count full line comments?
+  Max: 25
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+    - 'config/routes.rb'
+
+Metrics/ClassLength:
+  Max: 300
+
+Metrics/CyclomaticComplexity:
+  Max: 12
+
+Metrics/LineLength:
+  Max: 100
+  Exclude:
+    - 'db/**/*'
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/ParameterLists:
+  Max: 5
+  CountKeywordArgs: false
+
+Metrics/PerceivedComplexity:
+  Max: 12
+
+Naming/AccessorMethodName:
+  Enabled: true
+
+Naming/FileName:
+  Enabled: true
+
+Naming/MethodName:
+  Enabled: true
+
+Naming/PredicateName:
+  Enabled: true
+
+Rails/ActionFilter:
+  Enabled: true
+
+Rails/Blank:
+  Enabled: false
+
+Rails/Date:
+  Enabled: true
+  EnforcedStyle: flexible
+
+Rails/DynamicFindBy:
+  Enabled: false
+
+Rails/FilePath:
+  Enabled: false
+
+Rails/FindBy:
+  Enabled: true
+
+Rails/FindEach:
+  Enabled: true
+
+Rails/Output:
+  Enabled: true
+
+Rails/Present:
+  Enabled: false
+
+Rails/TimeZone:
+  Enabled: true
+  EnforcedStyle: flexible
+
+Rails/ReadWriteAttribute:
+  Enabled: true
+
+Rails/ReversibleMigration:
+  Enabled: false
+
+Rails/ScopeArgs:
+  Enabled: true
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Rails/Validation:
+  Enabled: true
+
+Style/Alias:
+  Enabled: true
+
+Style/BracesAroundHashParameters:
+  Enabled: true
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/ClassVars:
+  Enabled: false
+
+Style/CollectionMethods:
+  Enabled: false
+
+Style/ColonMethodCall:
+  Enabled: true
+
+Style/CommentAnnotation:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/EmptyElse:
+  Enabled: false
+
+Style/FormatString:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/GlobalVars:
+  AllowedVariables:
+    - $show_exceptions
+
+Style/HashSyntax:
+  Enabled: true
+  EnforcedStyle: ruby19
+
+Style/IfUnlessModifier:
+  Enabled: true
+
+Style/LambdaCall:
+  Enabled: false
+
+Layout/LeadingCommentSpace:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented
+
+Style/MethodCallWithoutArgsParentheses:
+  Enabled: true
+
+Style/MultilineIfModifier:
+  Enabled: false
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: false
+
+Style/MethodDefParentheses:
+  Enabled: true
+
+Style/NegatedIf:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Style/NilComparison:
+  Enabled: true
+
+Style/Not:
+  Enabled: true
+
+Style/NumericLiterals:
+  MinDigits: 12
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/ParenthesesAroundCondition:
+  Enabled: true
+  AllowSafeAssignment: true
+
+Style/PerlBackrefs:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
+Style/RedundantBegin:
+  Enabled: true
+
+Style/RedundantReturn:
+  Enabled: true
+
+Style/RedundantSelf:
+  Enabled: true
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/RescueModifier:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Style/SignalException:
+  Enabled: false
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/TrailingUnderscoreVariable:
+  Enabled: false
+
+Style/UnlessElse:
+  Enabled: true
+
+Style/WordArray:
+  Enabled: false
+
+Style/InverseMethods:
+  Enabled: false
